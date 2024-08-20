@@ -4,18 +4,20 @@ import useClickableCard from '@/utilities/useClickableCard'
 import Link from 'next/link'
 import React, { Fragment } from 'react'
 
-import type { Post } from '../../../payload-types'
+import type { AdArticle, Post } from '../../../payload-types'
 
 import { Media } from '../Media'
 
-export const Card: React.FC<{
-  alignItems?: 'center'
+export type Props = {
+  alignItems?: string
   className?: string
-  doc?: Post
-  relationTo?: 'posts'
+  doc?: Post | AdArticle
+  relationTo?: string
   showCategories?: boolean
   title?: string
-}> = (props) => {
+}
+
+export const Card: React.FC<Props> = (props: Props) => {
   const { card, link } = useClickableCard({})
   const { className, doc, relationTo, showCategories, title: titleFromProps } = props
 
@@ -25,7 +27,7 @@ export const Card: React.FC<{
   const hasCategories = categories && Array.isArray(categories) && categories.length > 0
   const titleToUse = titleFromProps || title
   const sanitizedDescription = description?.replace(/\s/g, ' ') // replace non-breaking space with white space
-  const href = `/${relationTo}/${slug}`
+  const href = `/${relationTo || 'posts'}/${slug}`
 
   return (
     <article
