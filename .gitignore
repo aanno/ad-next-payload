@@ -5,7 +5,10 @@ node_modules
 .env
 .next
 .vercel
+.husky/
+.eslintcache
 /*.db
+*.tsbuildinfo
 
 # Payload default media upload directory
 public/media/
