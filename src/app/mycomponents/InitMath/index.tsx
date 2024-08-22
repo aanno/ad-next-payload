@@ -1,18 +1,16 @@
+'use client'
+
 import Script from 'next/script'
 import React from 'react'
 
 export const InitMath: React.FC = () => {
-  return (
     // ignore eslint-disable-next-line @next/next/no-before-interactive-script-outside-document
-    <>
+    return (
+        <>
       <Script
         src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_HTMLorMML"
         id="math-lib"
-      />
-      <Script
-        dangerouslySetInnerHTML={{
-          __html: `
-  (function () {
+        onLoad={() => {
 MathJax.Hub.Config({
   messageStyle: "none",
   tex2jax: { inlineMath: [["\\(", "\\)"]], displayMath: [["\\[", "\\]"]], ignoreClass: "nostem|nolatexmath" },
@@ -27,12 +25,9 @@ MathJax.Hub.Register.StartupHook("AsciiMath Jax Ready", function () {
     return data
   })
 })
-  })();
-    `,
-        }}
-        id="math-script"
+  }}
       />
-    </>
+      </>
   )
   // type="text/x-mathjax-config"
   // strategy="beforeInteractive"
