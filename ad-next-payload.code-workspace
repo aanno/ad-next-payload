@@ -5,4 +5,18 @@
     },
   ],
   "settings": {},
+  "extensions": {
+    "recommendations": [
+      "bradlc.vscode-tailwindcss",
+      "ms-vscode.vscode-typescript-next",
+      "esbenp.prettier-vscode",
+      "dbaeumer.vscode-eslint",
+      "firefox-devtools.vscode-firefox-debug",
+      "asciidoctor.asciidoctor-vscode",
+      "unifiedjs.vscode-mdx",
+      "swastik2442.intellisense-mathjax",
+      "imgildev.vscode-next-pack"
+    ],
+    "unwantedRecommendations": []
+  }
 }
