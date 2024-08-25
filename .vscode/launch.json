@@ -6,6 +6,7 @@
   // https://github.com/vercel/next.js/issues/62008
   "version": "0.2.0",
   "configurations": [
+    // not working (breakpoints in ts are not recognized)
     {
       "name": "Next.js: debug server-side",
       "command": "pnpm dev",
@@ -13,22 +14,38 @@
       "type": "node-terminal",
       "trace": true,
       "sourceMaps": true,
+      "outFiles": [
+        "${workspaceFolder}/.next/static/chunks/**/*.js",
+        "${workspaceFolder}/.next/server/vendor-chunks/**/*.js",
+      ]
     },
     {
-      "name": "Next.js: debug client-side",
+      "name": "Next.js: launch debug chrome",
       "type": "chrome",
       "request": "launch",
       "url": "http://localhost:3000"
     },
+    // needs a special started browser with
+    // --remote-debugging-port=9222 --user-data-dir=remote-debug-profile
+    // see https://code.visualstudio.com/docs/nodejs/browser-debugging
+    {
+      "name": "Next.js: attach debug chrome",
+      "port": 9222,
+      "request": "attach",
+      "type": "chrome",
+      "webRoot": "${workspaceFolder}"
+    },
+    // not working (server breakpoints in ts are not recognized, error to find '/home/tpasch/tmp/ad-next-payload/.vscode/launch.json')
     {
       "name": "Next.js: debug full stack",
       "type": "node",
       "request": "launch",
-      "program": "${workspaceFolder}/node_modules/.bin/next",
+      // "program": "${workspaceFolder}/node_modules/.bin/next",
+      "program": "${workspaceFolder}/node_modules/next/dist/bin/next",
       "runtimeArgs": ["--inspect"],
       "skipFiles": ["<node_internals>/**"],
       "serverReadyAction": {
-        "action": "debugWithEdge",
+        "action": "debugWithChrome",
         "killOnServerStop": true,
         "pattern": "- Local:.+(https?://.+)",
         "uriFormat": "%s",
