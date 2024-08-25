@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "build": "cross-env NODE_OPTIONS=--no-deprecation next build",
-    "dev": "cross-env NODE_OPTIONS=--no-deprecation next dev",
+    "dev": "cross-env NODE_OPTIONS='--no-deprecation --inspect' next dev",
+    "dev:turbo": "cross-env NODE_OPTIONS='--no-deprecation' next dev --turbo",
     "dev:prod": "cross-env NODE_OPTIONS=--no-deprecation rm -rf .next && pnpm build && pnpm start",
     "ii": "cross-env NODE_OPTIONS=--no-deprecation pnpm --ignore-workspace install",
     "lint": "cross-env NODE_OPTIONS=--no-deprecation next lint",
@@ -83,7 +84,6 @@
     "eslint-plugin-ts": "^1.0.0",
     "globals": "^15.9.0",
     "husky": "^9.1.5",
-    "libsql": "0.4.2-pre.3",
     "postcss": "^8.4.38",
     "prettier": "^3.0.3",
     "tailwindcss": "^3.4.3",

@@ -181,9 +181,6 @@ importers:
       husky:
         specifier: ^9.1.5
         version: 9.1.5
-      libsql:
-        specifier: 0.4.2-pre.3
-        version: 0.4.2-pre.3
       postcss:
         specifier: ^8.4.38
         version: 8.4.41
@@ -1230,18 +1227,8 @@ packages:
     cpu: [arm64]
     os: [darwin]
 
-  '@libsql/darwin-arm64@0.4.2-pre.3':
-    resolution: {integrity: sha512-fb1E+beWsvytAKTRGQtKAMNezftyxUFlcvLmVc1RnvLXpmF0WiKnlCsMb4z3zIjFFdGo7fQ7KCNo90+4JTsjDw==}
-    cpu: [arm64]
-    os: [darwin]
-
   '@libsql/darwin-x64@0.3.19':
     resolution: {integrity: sha512-q9O55B646zU+644SMmOQL3FIfpmEvdWpRpzubwFc2trsa+zoBlSkHuzU9v/C+UNoPHQVRMP7KQctJ455I/h/xw==}
-    cpu: [x64]
-    os: [darwin]
-
-  '@libsql/darwin-x64@0.4.2-pre.3':
-    resolution: {integrity: sha512-8BhHBfogRgGBOY/mYIOewXHkoaLeSbIZRHuDP29c3/U0fcYLFVVrhvGbpsMKfLkNYZPGDoQhUw5OaZCS//qhwQ==}
     cpu: [x64]
     os: [darwin]
 
@@ -1260,18 +1247,8 @@ packages:
     cpu: [arm64]
     os: [linux]
 
-  '@libsql/linux-arm64-gnu@0.4.2-pre.3':
-    resolution: {integrity: sha512-+NXTep5LJm6KbWscR56S4XznpefTVygKhaSKkSiHXxTuTot9HYwEocPTeflcBHK9aGhdkJF7+peqao+kL7YRRQ==}
-    cpu: [arm64]
-    os: [linux]
-
   '@libsql/linux-arm64-musl@0.3.19':
     resolution: {integrity: sha512-VEZtxghyK6zwGzU9PHohvNxthruSxBEnRrX7BSL5jQ62tN4n2JNepJ6SdzXp70pdzTfwroOj/eMwiPt94gkVRg==}
-    cpu: [arm64]
-    os: [linux]
-
-  '@libsql/linux-arm64-musl@0.4.2-pre.3':
-    resolution: {integrity: sha512-bwBG+TZnhJfULue3lb8g2qbcNNS2SVEh78gK8nqGN98WKLn1f0xH3Im/pzJ/7Ln4nkMGa/Jj9J9S8N6i9fiKCw==}
     cpu: [arm64]
     os: [linux]
 
@@ -1280,28 +1257,13 @@ packages:
     cpu: [x64]
     os: [linux]
 
-  '@libsql/linux-x64-gnu@0.4.2-pre.3':
-    resolution: {integrity: sha512-H6zbQ5e3FubnSTqi/jyQq3Un4sdOgGCFAX6c/PChXLnBKKVdDzkYqCDZh4T8D1oP+7Cqfw2ANTW5DPoEKniZ4A==}
-    cpu: [x64]
-    os: [linux]
-
   '@libsql/linux-x64-musl@0.3.19':
     resolution: {integrity: sha512-BLsXyJaL8gZD8+3W2LU08lDEd9MIgGds0yPy5iNPp8tfhXx3pV/Fge2GErN0FC+nzt4DYQtjL+A9GUMglQefXQ==}
     cpu: [x64]
     os: [linux]
 
-  '@libsql/linux-x64-musl@0.4.2-pre.3':
-    resolution: {integrity: sha512-Xsd/FMnH3oiUqM+jazTJOYudQMGwgSIohGI3irFvUDtTUS7TLMi2yzR2lGztX6CjgMk03cQgfdc/ZY4f0RHVJw==}
-    cpu: [x64]
-    os: [linux]
-
   '@libsql/win32-x64-msvc@0.3.19':
     resolution: {integrity: sha512-ay1X9AobE4BpzG0XPw1gplyLZPGHIgJOovvW23gUrukRegiUP62uzhpRbKNogLlUOynyXeq//prHgPXiebUfWg==}
-    cpu: [x64]
-    os: [win32]
-
-  '@libsql/win32-x64-msvc@0.4.2-pre.3':
-    resolution: {integrity: sha512-W0jMtpUI6tPjk9RKHe59JSI6EQZKDsQ1B/TyuMsc1TN6+DZbNHmK5dmY6hBXfDAHdK2Jr/+A7gKtxyiEfpykEQ==}
     cpu: [x64]
     os: [win32]
 
@@ -3951,12 +3913,6 @@ packages:
 
   libsql@0.3.19:
     resolution: {integrity: sha512-Aj5cQ5uk/6fHdmeW0TiXK42FqUlwx7ytmMLPSaUQPin5HKKKuUPD62MAbN4OEweGBBI7q1BekoEN4gPUEL6MZA==}
-    cpu: [x64, arm64, wasm32]
-    os: [darwin, linux, win32]
-
-  libsql@0.4.2-pre.3:
-    resolution: {integrity: sha512-08cMmYfzEzQjR7lov/qR9RoWrbxdW8O7GN9yREyKbGgPoqDwa5GcrO2t5YITdDRrK0oI3gU3f26MZp016Avgiw==}
-    cpu: [x64, arm64, wasm32]
     os: [darwin, linux, win32]
 
   lilconfig@2.1.0:
@@ -6653,13 +6609,7 @@ snapshots:
   '@libsql/darwin-arm64@0.3.19':
     optional: true
 
-  '@libsql/darwin-arm64@0.4.2-pre.3':
-    optional: true
-
   '@libsql/darwin-x64@0.3.19':
-    optional: true
-
-  '@libsql/darwin-x64@0.4.2-pre.3':
     optional: true
 
   '@libsql/hrana-client@0.6.2':
@@ -6685,31 +6635,16 @@ snapshots:
   '@libsql/linux-arm64-gnu@0.3.19':
     optional: true
 
-  '@libsql/linux-arm64-gnu@0.4.2-pre.3':
-    optional: true
-
   '@libsql/linux-arm64-musl@0.3.19':
-    optional: true
-
-  '@libsql/linux-arm64-musl@0.4.2-pre.3':
     optional: true
 
   '@libsql/linux-x64-gnu@0.3.19':
     optional: true
 
-  '@libsql/linux-x64-gnu@0.4.2-pre.3':
-    optional: true
-
   '@libsql/linux-x64-musl@0.3.19':
     optional: true
 
-  '@libsql/linux-x64-musl@0.4.2-pre.3':
-    optional: true
-
   '@libsql/win32-x64-msvc@0.3.19':
-    optional: true
-
-  '@libsql/win32-x64-msvc@0.4.2-pre.3':
     optional: true
 
   '@monaco-editor/loader@1.4.0(monaco-editor@0.38.0)':
@@ -9999,20 +9934,6 @@ snapshots:
       '@libsql/linux-x64-gnu': 0.3.19
       '@libsql/linux-x64-musl': 0.3.19
       '@libsql/win32-x64-msvc': 0.3.19
-
-  libsql@0.4.2-pre.3:
-    dependencies:
-      '@neon-rs/load': 0.0.4
-      detect-libc: 2.0.2
-      libsql: 0.3.19
-    optionalDependencies:
-      '@libsql/darwin-arm64': 0.4.2-pre.3
-      '@libsql/darwin-x64': 0.4.2-pre.3
-      '@libsql/linux-arm64-gnu': 0.4.2-pre.3
-      '@libsql/linux-arm64-musl': 0.4.2-pre.3
-      '@libsql/linux-x64-gnu': 0.4.2-pre.3
-      '@libsql/linux-x64-musl': 0.4.2-pre.3
-      '@libsql/win32-x64-msvc': 0.4.2-pre.3
 
   lilconfig@2.1.0: {}
 

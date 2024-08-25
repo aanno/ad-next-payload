@@ -19,7 +19,25 @@ const nextConfig = {
     ],
   },
   reactStrictMode: true,
+  productionBrowserSourceMaps: true,
   redirects,
+  // https://www.highlight.io/blog/lw5-next-js-server-sourcemaps
+  // https://webpack.js.org/configuration/devtool/
+  // https://github.com/vercel/next.js/issues/918
+  // https://github.com/vercel/next.js/issues/1903
+  // https://nextjs.org/docs/messages/improper-devtool
+  // https://github.com/vercel/next.js/discussions/66960
+  webpack: (config, { isServer, dev }) => {
+    // if (isServer) {
+      config.mode = 'development'
+      // config.devtool = 'source-map'
+      config.devtool = 'eval-source-map'
+      // config.output['sourceMapFilename'] = '[file].map[query]'
+      // console.log(JSON.stringify(config.devtool))
+      // console.log(JSON.stringify(config.output))
+    // }
+    return config
+  },
 }
 
 export default withPayload(nextConfig)
