@@ -18,6 +18,7 @@
     "start": "cross-env NODE_OPTIONS=--no-deprecation next start"
   },
   "dependencies": {
+    "@payloadcms/db-sqlite": "3.0.0-beta.84",
     "@payloadcms/live-preview-react": "3.0.0-beta.84",
     "@payloadcms/next": "3.0.0-beta.84",
     "@payloadcms/plugin-cloud": "3.0.0-beta.84",
@@ -40,7 +41,7 @@
     "lexical": "0.17.0",
     "lucide-react": "^0.378.0",
     "next": "15.0.0-canary.104",
-    "payload": "3.0.0-beta.84",
+    "payload": "3.0.0-beta.91",
     "payload-admin-bar": "^1.0.6",
     "prism-react-renderer": "^2.3.1",
     "react": "19.0.0-rc-06d0b89e-20240801",
@@ -48,8 +49,7 @@
     "react-hook-form": "7.45.4",
     "sharp": "0.32.6",
     "tailwind-merge": "^2.3.0",
-    "tailwindcss-animate": "^1.0.7",
-    "@payloadcms/db-sqlite": "3.0.0-beta.84"
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^13.1.6",
