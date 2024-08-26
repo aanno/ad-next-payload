@@ -39,6 +39,13 @@
       }
     },
     {
+      "name": "Next.js: debug simple server-side",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "pnpm run dev",
+      "sourceMaps": true,
+    },
+    {
       "name": "Next.js: launch debug chrome",
       "type": "chrome",
       "request": "launch",
