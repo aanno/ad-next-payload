@@ -26,14 +26,16 @@
         "${workspaceFolder}/.next/server/vendor-chunks/**/*.js",
       ]
     },
+    // not working (compile error with 'Package XXX (serverExternalPackages or default list) can't be external')
     {
       "name": "Next.js: debug turbo server-side",
       "type": "node-terminal",
       "request": "launch",
-      "command": "pnpm run dev",
+      "command": "pnpm run dev --turbo",
       "sourceMaps": true,
       "sourceMapPathOverrides": {
-        "/turbopack/[project]/*": "${webRoot}/*"
+        // "/turbopack/[project]/*": "${webRoot}/*",
+        "/turbopack/[project]/*": "${workspaceFolder}/*"
       }
     },
     {
