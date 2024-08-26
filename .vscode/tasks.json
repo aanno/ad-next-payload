@@ -1,0 +1,13 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "transpile",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "pnpm transpile",
+			"detail": "cross-env NODE_OPTIONS='--no-deprecation' pnpm run transpile"
+		}
+	]
+}

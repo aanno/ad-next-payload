@@ -13,10 +13,13 @@
       "command": "pnpm dev",
       "request": "launch",
       "type": "node-terminal",
+      "preLaunchTask": "pnpm transpile",
       "trace": true,
       "sourceMaps": true,
       "sourceMapPathOverrides": {
-        "webpack://_N_E/*": "${workspaceFolder}/*"
+        "webpack://_N_E/*": "${workspaceFolder}/out/*",
+        "${workspaceFolder}/.next/static/chunks/*": "${workspaceFolder}/out/*",
+        "${workspaceFolder}/.next/server/vendor-chunks/*": "${workspaceFolder}/out/*",
       },
       "outFiles": [
         "${workspaceFolder}/.next/static/chunks/**/*.js",
@@ -49,7 +52,8 @@
       "type": "chrome",
       "webRoot": "${workspaceFolder}"
     },
-    // not working (server breakpoints in ts are not recognized, error to find '/home/tpasch/tmp/ad-next-payload/.vscode/launch.json')
+    // not working (server breakpoints in ts are not recognized, error to find
+    // 'ad-next-payload/.next/server/vendor-chunks/script.js.map')
     {
       "name": "Next.js: debug full stack",
       "type": "node",

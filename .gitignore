@@ -9,6 +9,7 @@ node_modules
 .eslintcache
 /*.db
 *.tsbuildinfo
+/out/
 
 # Payload default media upload directory
 public/media/
