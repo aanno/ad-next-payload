@@ -13,6 +13,7 @@ import { PostHero } from '../../../heros/PostHero'
 import { generateMeta } from '../../../utilities/generateMeta'
 import PageClient from './page.client'
 import Ad from '@/mycomponents/ad'
+import AdClient from '@/mycomponents/ad/index.client'
 
 export async function generateStaticParams() {
   const payload = await getPayloadHMR({ config: configPromise })
@@ -45,6 +46,9 @@ export default async function Post({ params: { slug = '' } }) {
       <div className="flex flex-col gap-4 pt-8">
         <div className="container lg:grid lg:grid-cols-[1fr_48rem_1fr] grid-rows-[1fr]">
           <Ad content={article.content} />
+        </div>
+        <div className="container lg:grid lg:grid-cols-[1fr_48rem_1fr] grid-rows-[1fr]">
+          <AdClient content={article.content} />
         </div>
 
         <RelatedPosts
